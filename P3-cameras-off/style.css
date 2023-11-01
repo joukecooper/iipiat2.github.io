@@ -1,0 +1,87 @@
+a {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  padding: 0 5rem;
+  height: 91vh;
+  background-image: url(/images/camera-off.av);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+section {
+  height: 60%;
+  display: flex;
+}
+
+section img {
+  height: 100%;
+}
+
+#cabinet {
+  margin-left: 20px;
+  height: 30%;
+}
+
+#cabinet:hover{
+  border-radius: 25px;
+}
+
+#progress-made {
+  width: var(--scene-cameras-off);
+  animation-name: progress;
+  animation-duration: 1s;
+}
+
+@keyframes progress {
+  from {width: var(--scene-cameras-on);}
+  to {width: var(--scene-cameras-off);}
+}
+
+@media only screen and (max-width: 900px) {
+  html, body {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  nav {
+    position: absolute !important;
+    padding: 1rem 2rem;
+  }
+  
+  main {
+    background-size: contain;
+    height: 99vh;
+    width: 200%;
+    white-space: nowrap;
+    background-attachment: scroll;
+    padding: 0 2rem;
+  }
+
+  img {
+    height: 55%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 250%;
+    height: 105vh;
+  }
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  img {
+    height: 55%;
+  }
+}

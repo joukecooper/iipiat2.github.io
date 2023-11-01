@@ -1,0 +1,73 @@
+a {
+  height: 60%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 5rem;
+  height: 91vh;
+  background-image: url(/images/square/hallway.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#progress-made {
+  width: var(--scene-hallway);
+  animation-name: progress;
+  animation-duration: 1s;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--scene-hallway);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html,
+  body {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  nav {
+    position: absolute !important;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    background-size: contain;
+    height: 99vh;
+    width: 200%;
+    white-space: nowrap;
+    background-attachment: scroll;
+    padding: 0 2rem;
+  }
+
+  img {
+    height: 55%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 250%;
+    height: 105vh;
+  }
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  img {
+    height: 55%;
+  }
+}

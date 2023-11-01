@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Turn off the cameras</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+  </head>
+  <body id="body-container">
+    <aside id="highscore-container">
+      <h2>High score</h2>
+      <p id="highscore">None yet</p>
+      <button id="give-up-button">Give up</button>
+    </aside>
+    <article id="overlay">
+      <h1 id="win-or-lose-header">You won!</h1>
+      <a href="/P3-cameras-off/index.html">Go back to the room</a>
+    </article>
+    <main id="puzzle-container">
+      <article>
+        <h1>Turn off the cameras</h1>
+        <h6>By repairing the image</h6>
+      </article>
+      <article id="board"></article>
+      <article>
+        <h6>Turns: <span id="turns">0</span></h6>
+        <button id="reset-button">Reset puzzle</button>
+      </article>
+    </main>
+    <aside id="example-image">
+      <h2>Original image</h2>
+      <img src="images/example.avif" alt="example image for puzzle"/>
+      <button id="help-button">Help</button>
+    </aside>
+  </body>
+</html>

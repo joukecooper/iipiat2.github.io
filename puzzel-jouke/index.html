@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Goudstaven</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <section id="popup" class="popup">
+        <section class="popup-content">
+            <h2>Goldbar puzzle</h2>
+            <p>You have arrived at the vault! Collect as many gold bars in your bag by placing them as carefully as possible. Use the arrow keys to move and space bar to confirm the position of the gold bar. Get atleast 115 goldbars to succeed!</p>
+            <button id="startButton">Begin</button>
+        </section>
+    </section>
+    <section id="hintPopup" class="popup" style="display: none;">
+        <section class="popup-content">
+            <h2>Hint</h2>
+            <p>Place the gold bars as strategically as possible, keep as little space as possible between them. Gold bars are heavy, you cannot lift them once you lower them, so think carefully before lowering the gold bar.</p>
+            <button id="closeHintButton">Ga door</button>
+        </section>
+    </section>
+    <section id="collectGoalPopup" class="popup" style="display: none;">
+        <section class="popup-content">
+            <h2>Well done!</h2>
+            <p>You've collected enough gold bars to fund all broke students! Run quickly!</p>
+            <button id="continueButton">Run</button>
+        </section>
+    </section>
+    <section id="retryPopup" class="popup" style="display: none;">
+        <section class="popup-content">
+            <h2>Try Again</h2>
+            <p>You didn't collect enough gold bars to fund all the broke students, try it again...</p>
+            <button id="retryButton">Retry</button>
+        </section>
+    </section>
+    <section id="gameContainer">
+        <img src="/puzzel-jouke/images/vraagteken.png" alt="Hint" id="hintButton">
+        <section id="score">Score: 0</section>
+        <section id="highscore">Highscore: 0</section>
+        <canvas id="gameCanvas" width="300" height="550"></canvas>
+        <img src="/puzzel-jouke/images/open-tas.png" alt="Open tas" id="openTas">
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

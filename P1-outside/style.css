@@ -1,0 +1,72 @@
+main {
+  padding: 5rem;
+  height: 92vh;
+  background-image: url(/images/outside.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+#text-gold {
+  color: var(--gold);
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--gold);
+  color: var(--grey);
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--orange);
+}
+
+a:active {
+  background-color: var(--red);
+}
+
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html, body {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  nav {
+    position: sticky;
+    padding: 1rem 2rem;
+  }
+  
+  main {
+    background-size: cover;
+    height: 95vh;
+    width: 250%;
+    white-space: nowrap;
+    background-attachment:scroll;
+    padding: 6rem 2rem;
+  }
+
+  img {
+    height: 55%;
+  }
+}

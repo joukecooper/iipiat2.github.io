@@ -1,0 +1,160 @@
+:root {
+  --blue: #1F263F;
+  --gold: #D89011;
+  --red: #833731;
+  --orange: #9C573A;
+  --grey: #E5E5E5;
+
+  --size_board: 360px;
+  --number_tiles_column_row: 3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+h6 {
+  font-size: 2vw;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  color: var(--grey);
+  background-color: var(--blue);
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: 120px auto 120px;
+  grid-gap: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main article {
+  margin-top: 2vh;
+}
+
+main article:first-of-type {
+  margin-top: 0;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+aside img {
+  height: 120px;
+  margin: 2vh 0;
+}
+
+#board {
+  height: var(--size_board);
+  width: var(--size_board);
+  background-color: var(--gold);
+  border: 10px solid var(--gold);
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img {
+  width: calc((var(--size_board) / var(--number_tiles_column_row)) - 2px);
+  height: calc((var(--size_board) / var(--number_tiles_column_row)) - 2px);
+  border: 1px solid var(--gold);
+  cursor: grab;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  background-color: var(--gold);
+  color: var(--grey);
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: var(--orange);
+}
+
+button:active {
+  background-color: var(--red);
+}
+
+#overlay {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#overlay h1 {
+  width: 100%;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--gold);
+  color: var(--grey);
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--orange);
+}
+
+a:active {
+  background-color: var(--red);
+}
+
+#give-up-button {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  :root {
+    --size_board: 300px;
+  }
+
+  body {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    margin: 4vh 0;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  h6 {
+    font-size: 5vw;
+  }
+}
